@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
@@ -12,8 +11,10 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * The ATM class represents an Automated Teller Machine that allows users to
+ * perform banking transactions.
  *
- * @author grech
+ * * @author grech
  */
 public class ATM implements Transactions {
 
@@ -104,7 +105,10 @@ public class ATM implements Transactions {
         }
     }
 
-    public static class HelperClass {
+    /**
+     * Helper class for ATM class that validates account number and pin
+     */
+    private static class HelperClass {
 
         /**
          * Validates the format of the card number entered

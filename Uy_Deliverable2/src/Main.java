@@ -27,6 +27,7 @@ public class Main extends Application {
     private Stage primaryStage;
 
     /**
+     * Main method to execute the ATM 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -83,7 +84,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        primaryStage.setTitle("Banking App");
+        primaryStage.setTitle("ATM");
 
         //shows the login window
         showLoginScene();
@@ -271,7 +272,7 @@ public class Main extends Application {
             if (atm().getRequestProcess() != false) {
 
                 accountText.setText("Withdraw from Chequing Account:\n\n");
-                processText.setText("Amount withdrawn: " + amount);
+                processText.setText("Amount withdrawn: $" + amount);
 
                 Account clientAcc;
                 double balance = 0;
@@ -289,7 +290,7 @@ public class Main extends Application {
 
                             //atm().enterTransactionHistory("Withdrawal");
                             balance = clientAcc.getBalance();
-                            newBalanceText.setText("New balance " + balance + "\n\n");
+                            newBalanceText.setText("New balance: $ " + balance + "\n\n");
 
                         }
 
@@ -378,7 +379,7 @@ public class Main extends Application {
 
         yourBalanceText.setText("Your balance is: ");
         balance.setFont(font);
-        balance.setText(balanceAmount);
+        balance.setText("$" + balanceAmount);
 
         //add back button
         Button doMoreButton = new Button("More transactions");

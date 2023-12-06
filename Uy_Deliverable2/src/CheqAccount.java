@@ -5,7 +5,7 @@
 
 
 /**
- *
+ *The CheqAccount class represents a Chequing Account that extends the Account class.
  * @author grech
  */
 public class CheqAccount extends Account {

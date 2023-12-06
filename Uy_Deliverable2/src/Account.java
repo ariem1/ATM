@@ -7,13 +7,14 @@
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
- *
+ * The abstract class representing a generic bank account.
+ * * This class provides basic functionality for managing account information
+ * and performing financial transactions.
  * @author grech
  */
-public abstract class Account extends User implements Transactions, Serializable {
+public abstract class Account extends User implements Transactions {
 
     private String cardNum;
 

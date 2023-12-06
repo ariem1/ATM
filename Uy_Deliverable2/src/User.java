@@ -3,11 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
+ * The User class represents a bank user with associated accounts and PIN
+ * information.
  *
  * @author grech
  */
@@ -91,8 +92,8 @@ public class User {
 
         return this.getAccLinked().get(ind);
     }
-    
-        /**
+
+    /**
      * Retrieves the savings account linked to the client.
      *
      * @return The savings account linked to the client.
@@ -109,7 +110,6 @@ public class User {
 
         return this.getAccLinked().get(ind);
     }
-
 
     //getters & setters
     public String getAccNum() {
