@@ -59,7 +59,6 @@ public class Main extends Application {
 
         //make Savings account
         SavingsAcc s2 = new SavingsAcc(100, user2);
-        System.out.println(s2.getAccNum());
 
         //link Cheq to User
         user2.linkAccount(c2);
@@ -93,6 +92,7 @@ public class Main extends Application {
     }
 
     private void showLoginScene() {
+        System.out.println("Welcome to ATM!");
         //make container
         VBox vbLogin = new VBox();
         vbLogin.setAlignment(Pos.CENTER);
@@ -115,6 +115,7 @@ public class Main extends Application {
         invalid.setText("Invalid account number or pin!");
         invalid.setFill(Color.RED);
         invalid.setVisible(false);
+        System.out.println("Invalid account number or pin!");
 
         //login button
         Button loginButton = new Button("Login");
@@ -134,6 +135,7 @@ public class Main extends Application {
     }
 
     private void chooseTransaction(TextField acc, TextField pin, Text invalid) {
+        
 
         VBox vbAccount = new VBox(10);
         vbAccount.setAlignment(Pos.CENTER);
@@ -146,8 +148,9 @@ public class Main extends Application {
         //checks if pin and card number match
         if (atm().validate(atm(), acc.getText(), pin.getText())) {
 
-            //establish client
-            //int ind = HelperClass.UserExists(acc.getText());
+            System.out.println("Login successful.");
+            System.out.println("User : " + acc.getText());
+              
             //if true go to next scenes
             withdrawButton.setOnAction(e -> showAccountTypeScene("Withdraw"));
             balanceButton.setOnAction(e -> showAccountTypeScene("Balance"));
@@ -214,7 +217,7 @@ public class Main extends Application {
 
         //sets the type of account the client wants to withdraw from
         if (accountType == "Chequing") {
-
+  
             //set chequing account
             atm().setChoice(atm().cheqAccount());
 
