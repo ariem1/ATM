@@ -10,6 +10,17 @@
 <project name="Uy_Deliverable2" default="default" basedir=".">
     <description>Builds, tests, and runs the project Uy_Deliverable2.</description>
     <import file="nbproject/build-impl.xml"/>
+
+    <!-- Create JAR file after the regular JAR build -->
+  <target name="-post-jar">
+    <jar destfile="dist/ATM.jar">
+        <fileset dir="build/classes"/>
+        <manifest>
+            <attribute name="Main-Class" value="uy_deliverable2.MainClass"/>
+        </manifest>
+    </jar>
+</target>
+</project>
     <!--
 
     There exist several targets which are by default empty and which can be 
@@ -70,4 +81,4 @@
     nbproject/build-impl.xml file. 
 
     -->
-</project>
+

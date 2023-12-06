@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package uy_deliverable2;
+
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -17,7 +17,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import uy_deliverable2.ATM.HelperClass;
 
 /**
  *
@@ -26,7 +25,6 @@ import uy_deliverable2.ATM.HelperClass;
 public class Main extends Application {
 
     private Stage primaryStage;
-    private ATM atmClient;
 
     /**
      * @param args the command line arguments
@@ -115,7 +113,6 @@ public class Main extends Application {
         invalid.setText("Invalid account number or pin!");
         invalid.setFill(Color.RED);
         invalid.setVisible(false);
-        System.out.println("Invalid account number or pin!");
 
         //login button
         Button loginButton = new Button("Login");
@@ -320,7 +317,7 @@ public class Main extends Application {
             } else {
 
                 //Withdraw denied
-                System.out.println("scene denied");
+                System.out.println("Withdraw denied \nInsufficient funds.");
                 processText.setText("Withdraw denied \nInsufficient funds.");
                 primaryStage.setScene(processScene);
 
